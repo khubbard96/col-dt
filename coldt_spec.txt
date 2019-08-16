@@ -1,0 +1,50 @@
+### table structure ###
+#COL_Table_Container
+    .table-container
+        .table-header-container
+            .table-header
+            .table-header
+            ...
+        .table-rows-container
+            .table-rows
+                .table-row
+                .table-row
+                ...
+
+### defaults ###
+
+
+
+## defaults ##
+    -header class: ".coldt-header"
+        *main header class: "header-default"
+        *alt header class: "header-alt"
+    -table class: ".coldt-table"
+
+    ***the script templates should have these class names in the classlist***
+
+
+<script type="text/html" class="coldt-header header-default"></script>
+<script type="text/html" class="coldt-header header-alt" data-headerid="bulkedit" data-headercondition="condition"></script>
+<script type="text/html" class="coldt-table"></script>
+### headers ###
+    -headers have the .coldt-header class
+    -all coldt's have to have a default header (.header-default) but can also have alternate headers
+    -default headers can contain header buttons, that do actions when clicked
+    -alt headers are activated/deactivated when their specified headercondition variable is set
+    -alt headers can be fixed width and not scroll, or variable width and scroll with the table
+
+### header buttons ###
+    -can define a header button by giving an element the .header-button class and giving it a data-btnaction value
+
+### table ###
+
+
+{
+    header: ".header-class",
+    table: ".table-class",
+}
+
+new COLDataTable({
+
+});
